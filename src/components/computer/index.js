@@ -64,18 +64,53 @@ const Monitor = styled.div`
     overflow-y: auto;
 `;
 class ComputerCase extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            cCounter: 0,
+            clrData: []
+        };
+    }
+
     handleEnterPress = e => {
+        const { cCounter, clrData } = this.state;
+        let _cCounter = cCounter;
+        let _clrData = clrData;
+
         if (e.key === "Enter") {
-            console.log("press enter!");
+            if (e.target.value.length > 0 && e.target.value !== "clear") {
+                _cCounter++;
+                _clrData.push("" + e.target.value);
+                this.setState({
+                    cCounter: _cCounter,
+                    clrData: _clrData
+                });
+            } else {
+                this.setState({
+                    cCounter: 0,
+                    clrData: []
+                });
+            }
         }
     };
     render() {
+        const { clrData } = this.state;
+        console.log(clrData);
         return (
             <Computer>
                 <Monitor>
-                    <CommandLine
-                        handleEnterPress={e => this.handleEnterPress(e)}
-                    />
+                    {clrData.length > 0 ? (
+                        clrData.map((cmd, i) => (
+                            <CommandLine
+                                key={i}
+                                handleEnterPress={e => this.handleEnterPress(e)}
+                            />
+                        ))
+                    ) : (
+                        <CommandLine
+                            handleEnterPress={e => this.handleEnterPress(e)}
+                        />
+                    )}
                 </Monitor>
             </Computer>
         );
