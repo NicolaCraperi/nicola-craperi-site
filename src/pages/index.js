@@ -1,7 +1,7 @@
 import React from "react";
 import Computer from "../components/computer";
 import styled from "styled-components";
-import Info from "../Info";
+import Info from "../components/info";
 import "../../static/style.css";
 
 const FullDiv = styled.div`
