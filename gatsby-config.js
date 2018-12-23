@@ -5,6 +5,7 @@ module.exports = {
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
+                title: "HELLO",
                 name: "Nicola Craperi | DEV",
                 short_name: "ncraperi",
                 start_url: "/",

@@ -2,6 +2,7 @@ import React from "react";
 import Computer from "../components/computer";
 import styled from "styled-components";
 import Info from "../components/info";
+import Helmet from "react-helmet";
 import "../../static/style.css";
 
 const FullDiv = styled.div`
@@ -16,6 +17,12 @@ const Row = styled.div`
 `;
 export default () => (
     <FullDiv>
+        <Helmet>
+            <html lang="en" />
+            <meta charSet="utf-8" />
+            <meta name="description" content="Nicola Craperi personal site" />
+            <title>Nicola Craperi | DEV</title>
+        </Helmet>
         <Row>
             <Info />
             <Computer />
