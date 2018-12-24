@@ -7,11 +7,11 @@ export const data = {
     "nicola --info": {
         job: "developer",
         age: 21,
-        exepirence: "i started programming when i was 16",
+        exepirence: "i have started programming when i was 16",
         "born-date": "16th of Septemeber 1997"
     },
     "nicola --skills": {
-        "known programming-leanguage":
+        "programming-leanguage":
             "JAVA, Kotlin, JavaScript, PHP(basic knowledge), C/C++(medium),SQL",
         framework: "React, Angular(basic knowledge), SpringBoot,Hibernate"
     },
