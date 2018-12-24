@@ -12,6 +12,11 @@ const InfoWrapper = styled.div`
 
 const Link = styled.a`
     color: yellow;
+    text-decoration: none;
+    &:hover {
+        color: orange;
+        transition: color 500ms;
+    }
 `;
 
 const Contact = styled.div`
@@ -31,8 +36,15 @@ const Title = styled.div`
         height: 100px;
         object-fit: cover;
         margin-right: 10px;
-        border-radius: 50px;
+        border-radius: 50%;
         border: 2px solid yellow;
+        transition: width 500ms, height 500ms;
+
+        &:hover {
+            width: 150px;
+            height: 150px;
+            transition: width 500ms, height 500ms;
+        }
     }
 `;
 
@@ -47,7 +59,7 @@ export default () => (
             Hello! I'm Nicola Craperi.
             <br /> I'm currently working{" "}
             <Link href="https://mondora.com/#!/">@Mondora</Link> as junior
-            Software Developer.
+            software developer.
             <br /> I'm curious, and i love learn new things about programming
             world.
         </p>

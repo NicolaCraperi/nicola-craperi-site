@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import CommandLine from "../command-line";
+import CommandLineOutput from "../command-line-output";
 const Computer = styled.div`
     width: 640px;
     height: 448px;
@@ -58,7 +59,7 @@ const Monitor = styled.div`
     overflow: hidden;
     border-radius: 8px;
     background: black;
-    color: #b3f442;
+    color: white;
     padding: 10px;
     box-sizing: border-box;
     overflow-y: auto;
@@ -91,26 +92,26 @@ class ComputerCase extends React.Component {
                     clrData: []
                 });
             }
+            e.target.value = "";
         }
     };
     render() {
         const { clrData } = this.state;
-        console.log(clrData);
+        console.log(clrData.length - 1 === 0);
         return (
             <Computer>
                 <Monitor>
-                    {clrData.length > 0 ? (
-                        clrData.map((cmd, i) => (
-                            <CommandLine
-                                key={i}
-                                handleEnterPress={e => this.handleEnterPress(e)}
-                            />
-                        ))
-                    ) : (
-                        <CommandLine
-                            handleEnterPress={e => this.handleEnterPress(e)}
-                        />
-                    )}
+                    {clrData.length > 0
+                        ? clrData.map((cmd, i) => (
+                              <CommandLineOutput cmd={cmd} key={i} />
+                          ))
+                        : null}
+                    <CommandLine
+                        isFirstCommand={clrData.length === 0}
+                        handleEnterPress={e => {
+                            this.handleEnterPress(e);
+                        }}
+                    />
                 </Monitor>
             </Computer>
         );

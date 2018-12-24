@@ -1,20 +1,20 @@
 export const data = {
     help: {
         "nicola --info": "get some info about me",
-        "nicola skills": "my programming knowledge",
+        "nicola --skills": "my programming knowledge",
         "nicola --hobby": "my hobby... :)"
     },
-    "--info": {
+    "nicola --info": {
         job: "developer",
         age: 21,
-        exepirence: "i started progrmming when i was 16",
-        "born-date": "16th of Septemeber 1997",
-        stupid: true
+        exepirence: "i started programming when i was 16",
+        "born-date": "16th of Septemeber 1997"
     },
-    "--skills": {
+    "nicola --skills": {
         "known programming-leanguage":
-            "JAVA, JAVA EE,Kotlin, JavaScript, PHP(basic knowledge),C/C++,SQL",
-        framework: "React,Angular(basic knowledge),SpringBoot,Hibernate"
+            "JAVA, Kotlin, JavaScript, PHP(basic knowledge), C/C++(medium),SQL",
+        framework: "React, Angular(basic knowledge), SpringBoot,Hibernate"
     },
-    "--hobby": "my passion is bodybuilding"
+    "nicola --hobby": { passion: "bodybuilding", "other sports": "swimming" },
+    nicola: { nicola: "yes, i am" }
 };

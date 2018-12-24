@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-
+import { CmdLine } from "../../../static/commons/styled-components";
 const CommandLine = styled.input`
     background-color: black;
     color: white;
@@ -8,14 +8,16 @@ const CommandLine = styled.input`
     font-size: calc(0.8rem + 0.2vw);
     border: 0px;
     outline: none;
+    width: 50%;
 `;
 
 const CommandLineComponent = props => (
     <div>
-        visitor:~${" "}
+        <CmdLine>visitor:~$ </CmdLine>
         <CommandLine
-            placeholder="to start write help ;)"
+            placeholder={props.isFirstCommand ? "to start write help ;)" : null}
             onKeyPress={e => props.handleEnterPress(e)}
+            value={props.cmd}
         />
     </div>
 );
