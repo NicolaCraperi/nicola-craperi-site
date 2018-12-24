@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { data } from "../../../static/data";
+import { data } from "../../../static/commons/data";
 import { CmdLine } from "../../../static/commons/styled-components";
 
 const KeyWord = styled.span`
