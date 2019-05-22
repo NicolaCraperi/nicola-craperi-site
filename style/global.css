@@ -1,0 +1,27 @@
+@font-face {
+    font-family: "gageda";
+    src: url("../font/GagedaOld.ttf");
+}
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+body {
+    height: 100vh;
+    margin: 0;
+    overflow-y: hidden;
+    background-color: #161616;
+    color: white;
+}
+
+html {
+    font-family: "gageda" !important;
+}
+
+p {
+    font-family: "Montserrat" !important;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
