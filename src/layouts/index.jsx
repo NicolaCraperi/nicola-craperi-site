@@ -52,7 +52,7 @@ const Layout = ({ children, location }) => {
     return (
         <>
             <Helmet
-                title="Mondora.com"
+                title="Nicola Craperi | DEV"
                 meta={[
                     { name: "description", content: "Sample" },
                     { name: "keywords", content: "sample, something" },
