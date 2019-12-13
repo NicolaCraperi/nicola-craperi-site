@@ -15,7 +15,7 @@ const FullMenu = React.forwardRef((props, ref) => {
         if (ref.current) {
             setHeight(ref.current.offsetHeight)
         }
-    }, [])
+    }, [ref])
 
     const { setCurrentPosition, currentPosition } = props
 

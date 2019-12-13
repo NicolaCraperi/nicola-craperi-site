@@ -32,7 +32,7 @@ export const skills = [
             },
             {
                 framework: "Java for Android",
-                percentage: 70,
+                percentage: 50,
                 description:
                     "Consectetur mollit veniam id irure dolor est veniam reprehenderit incididunt cillum Lorem commodo reprehenderit qui.",
             },
@@ -58,13 +58,19 @@ export const skills = [
             },
             {
                 framework: "Build Restful webservice in Node.js",
-                percentage: 65,
+                percentage: 70,
                 description:
                     "Consectetur mollit veniam id irure dolor est veniam reprehenderit incididunt cillum Lorem commodo reprehenderit qui.",
             },
             {
                 framework: "Jquery",
                 percentage: 50,
+                description:
+                    "Consectetur mollit veniam id irure dolor est veniam reprehenderit incididunt cillum Lorem commodo reprehenderit qui.",
+            },
+            {
+                framework: "Angualar",
+                percentage: 30,
                 description:
                     "Consectetur mollit veniam id irure dolor est veniam reprehenderit incididunt cillum Lorem commodo reprehenderit qui.",
             },
@@ -85,6 +91,26 @@ export const skills = [
             {
                 framework: "APEX",
                 percentage: 65,
+                description:
+                    "Consectetur mollit veniam id irure dolor est veniam reprehenderit incididunt cillum Lorem commodo reprehenderit qui.",
+            },
+        ],
+    },
+    {
+        language: "DATA",
+        description:
+            "Consectetur mollit veniam id irure dolor est veniam reprehenderit incididunt cillum Lorem commodo reprehenderit qui.",
+        percentage: 0,
+        correlations: [
+            {
+                framework: "SQL",
+                percentage: 70,
+                description:
+                    "Consectetur mollit veniam id irure dolor est veniam reprehenderit incididunt cillum Lorem commodo reprehenderit qui.",
+            },
+            {
+                framework: "Mongo",
+                percentage: 60,
                 description:
                     "Consectetur mollit veniam id irure dolor est veniam reprehenderit incididunt cillum Lorem commodo reprehenderit qui.",
             },

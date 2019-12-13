@@ -23,14 +23,14 @@ export const NumberPage = styled.button`
     font-family: "gageda" !important;
     font-size: 16px;
     ${({ isActive }) =>
-        isActive ? `border-bottom: 2px solid ${colors.GREEN}` : ""}
+        isActive ? `border-bottom: 2px solid ${colors.RED}` : ""}
 `
 
 export const MenuButton = styled.button`
     width: 50px;
     height: 50px;
     z-index: 2;
-    background: ${colors.GREEN};
+    background: ${colors.RED};
     border: 0;
     outline: none;
 `

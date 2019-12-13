@@ -1,21 +1,24 @@
-import React from "react";
-import styled from "styled-components";
-import { data } from "../../../static/commons/data";
-import { CmdLine } from "../../../static/commons/styled-components";
+import React from "react"
+import styled from "styled-components"
+import { data } from "../../../static/data"
+
+const CmdLine = styled.span`
+    color: #b3f442;
+`
 
 const KeyWord = styled.span`
     color: ${props => props.color || "#54b5e5"};
     margin-right: 10px;
-`;
+`
 
 const CommandLineOutput = props => {
-    let commandResult = data[props.cmd.trim()];
+    let commandResult = data[props.cmd.trim()]
     if (props.cmd.toLowerCase().includes("coffee")) {
-        commandResult = { "418": "I'm a teapot" };
+        commandResult = { "418": "I'm a teapot" }
     } else if (!commandResult) {
         commandResult = {
-            error: "unknow command - write help for commands list"
-        };
+            error: "unknow command - write help for commands list",
+        }
     }
     return (
         <>
@@ -23,7 +26,7 @@ const CommandLineOutput = props => {
             {props.cmd}
             <br />
             {Object.keys(commandResult).map((key, i) => {
-                let value = commandResult[key];
+                let value = commandResult[key]
                 return (
                     <React.Fragment key={i}>
                         <KeyWord
@@ -36,10 +39,10 @@ const CommandLineOutput = props => {
                         {value}
                         <br />
                     </React.Fragment>
-                );
+                )
             })}
         </>
-    );
-};
+    )
+}
 
-export default CommandLineOutput;
+export default CommandLineOutput

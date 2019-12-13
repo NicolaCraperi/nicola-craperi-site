@@ -32,7 +32,7 @@ const ListItemContainer = styled.div`
     padding: 0 30px;
 `
 const ListItem = styled.div`
-    background-color: ${colors.GREEN};
+    background-color: ${colors.RED};
     height: 15px;
     width: 15px;
 `
@@ -46,7 +46,7 @@ const PercentageAnimation = percentage => keyframes`
  }`
 
 const PercentageBarContainer = styled.div`
-    background-image: linear-gradient(to right, red, yellow, green);
+    background-image: linear-gradient(to right, red, yellow, RED);
     height: 4px;
 `
 
