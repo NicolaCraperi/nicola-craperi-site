@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { data } from "../../../static/data"
 
 const CmdLine = styled.span`
-    color: #b3f442;
+    color: #fd5750;
 `
 
 const KeyWord = styled.span`

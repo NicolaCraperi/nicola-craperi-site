@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import CommandLine from "../command-line"
 import CommandLineOutput from "../command-line-output"
+import { colors } from "../../commons/colors"
 const Computer = styled.div`
     width: 640px;
     height: 448px;
@@ -19,6 +20,26 @@ const Monitor = styled.div`
     padding: 10px;
     box-sizing: border-box;
     overflow-y: auto;
+`
+
+const FakeButtonsContiner = styled.div`
+    display: flex;
+    padding-bottom: 6px;
+    border-bottom: 1px solid white;
+`
+const RedCircle = styled.div`
+    background-color: ${colors.RED};
+    width: 12px;
+    height: 12px;
+    border-radius: 10px;
+    margin-right: 4px;
+`
+const GreyCircle = styled.div`
+    background-color: grey;
+    width: 12px;
+    height: 12px;
+    border-radius: 10px;
+    margin-right: 4px;
 `
 class ComputerCase extends React.Component {
     constructor(props) {
@@ -57,6 +78,12 @@ class ComputerCase extends React.Component {
         return (
             <Computer>
                 <Monitor>
+                    {" "}
+                    <FakeButtonsContiner>
+                        <RedCircle />
+                        <GreyCircle />
+                        <GreyCircle />
+                    </FakeButtonsContiner>
                     {clrData.length > 0
                         ? clrData.map((cmd, i) => (
                               <CommandLineOutput cmd={cmd} key={i} />

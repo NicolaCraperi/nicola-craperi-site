@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 export const CmdLine = styled.span`
-    color: #b3f442;
+    color: #fd5750;
 `
 
 const CommandLine = styled.input`
